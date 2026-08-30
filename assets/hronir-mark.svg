@@ -3,7 +3,7 @@
   <desc id="desc">A spare H-like sigil made from doubled lines and eleven small cuts.</desc>
   <defs>
     <linearGradient id="main" x1="32" y1="28" x2="148" y2="152" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f6d873"/>
+      <stop stop-color="#ffe45c"/>
       <stop offset="0.46" stop-color="#35f0e4"/>
       <stop offset="1" stop-color="#ff2d78"/>
     </linearGradient>
@@ -31,7 +31,7 @@
       <path d="M133 35c8 22 8 88 0 110"/>
       <path d="M63 91c16-13 38 13 54 0"/>
     </g>
-    <g stroke="#f6d873" stroke-width="2.2" opacity="0.8">
+    <g stroke="#ffe45c" stroke-width="2.2" opacity="0.92">
       <path d="M86 31h8"/>
       <path d="M80 43h20"/>
       <path d="M75 55h30"/>
