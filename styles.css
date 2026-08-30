@@ -143,45 +143,15 @@ button {
   background: linear-gradient(90deg, transparent, rgba(53, 240, 228, 0.56), rgba(255, 45, 120, 0.35), transparent);
 }
 
-.initial {
+.mark {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: clamp(7rem, 20vmin, 11rem);
+  height: auto;
   margin-bottom: clamp(0.9rem, 3vmin, 1.5rem);
-  padding: 0.08em 0.21em 0.03em;
-  border-left: 2px solid var(--gold);
-  color: #f6d873;
-  background: linear-gradient(115deg, rgba(199, 162, 74, 0.22), rgba(53, 240, 228, 0.11) 56%, transparent);
-  font-family: "Cinzel", Georgia, serif;
-  font-size: clamp(4.8rem, 17vmin, 9rem);
-  font-weight: 700;
-  line-height: 0.88;
-  text-shadow:
-    0 0 22px rgba(199, 162, 74, 0.55),
-    0 0 42px rgba(53, 240, 228, 0.18);
-}
-
-.initial::before,
-.initial::after {
-  content: attr(data-letter);
-  position: absolute;
-  inset: 0.08em 0.21em 0.03em;
-  pointer-events: none;
-}
-
-.initial::before {
-  color: var(--cyan);
-  clip-path: polygon(0 8%, 100% 8%, 100% 42%, 0 42%);
-  opacity: 0.58;
-  transform: translate(-3px, 1px);
-  mix-blend-mode: screen;
-}
-
-.initial::after {
-  color: var(--magenta);
-  clip-path: polygon(0 57%, 100% 57%, 100% 96%, 0 96%);
-  opacity: 0.52;
-  transform: translate(3px, -1px);
-  mix-blend-mode: screen;
+  filter:
+    drop-shadow(0 0 18px rgba(53, 240, 228, 0.28))
+    drop-shadow(0 0 28px rgba(255, 45, 120, 0.12));
 }
 
 h1 {
@@ -366,8 +336,8 @@ noscript {
     column-gap: 1.1rem;
   }
 
-  .initial {
-    font-size: clamp(4.2rem, 28vw, 6.4rem);
+  .mark {
+    width: clamp(6.4rem, 34vw, 8.2rem);
   }
 
   h1 {
