@@ -176,7 +176,18 @@ button {
 
 .block {
   position: relative;
-  padding: 0.1rem 0 0;
+  padding: clamp(1.3rem, 4vmin, 2.35rem) clamp(1.25rem, 4vmin, 2.65rem);
+  border: 1px solid rgba(53, 240, 228, 0.18);
+  background:
+    linear-gradient(115deg, rgba(255, 228, 92, 0.08), transparent 28%),
+    linear-gradient(280deg, rgba(255, 45, 120, 0.1), transparent 38%),
+    rgba(4, 4, 9, 0.72);
+  box-shadow:
+    inset 0 0 0 1px rgba(245, 239, 217, 0.045),
+    inset 0 0 46px rgba(53, 240, 228, 0.06),
+    0 24px 80px rgba(0, 0, 0, 0.42),
+    0 0 52px rgba(53, 240, 228, 0.13);
+  backdrop-filter: blur(18px) saturate(1.1);
 }
 
 .block::before,
@@ -187,19 +198,17 @@ button {
 }
 
 .block::before {
-  inset: -14% auto auto -7%;
-  width: min(36vw, 18rem);
-  aspect-ratio: 1;
-  border: 1px solid rgba(255, 228, 92, 0.52);
-  transform: rotate(45deg);
+  inset: -9px;
+  border: 1px solid rgba(255, 228, 92, 0.42);
+  clip-path: polygon(0 0, 34% 0, 34% 1px, 1px 1px, 1px 42%, 0 42%, 0 0, 100% 58%, 100% 100%, 66% 100%, 66% calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 58%);
   box-shadow:
-    inset 0 0 36px rgba(255, 228, 92, 0.14),
-    0 0 34px rgba(53, 240, 228, 0.08);
+    0 0 30px rgba(255, 228, 92, 0.14),
+    0 0 46px rgba(255, 45, 120, 0.08);
 }
 
 .block::after {
-  inset: 18% -10% auto auto;
-  width: min(52vw, 28rem);
+  inset: auto -13% 18% auto;
+  width: min(44vw, 22rem);
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(53, 240, 228, 0.72), rgba(255, 45, 120, 0.48), transparent);
 }
@@ -395,6 +404,10 @@ noscript {
   .folio {
     grid-template-columns: auto minmax(0, 1fr);
     column-gap: 1.1rem;
+  }
+
+  .block {
+    padding: 1.2rem 1rem 1.35rem;
   }
 
   .mark {
