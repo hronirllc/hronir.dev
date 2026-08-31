@@ -14,11 +14,11 @@
       content="manifesting software objects"
     >
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/hronir-mark.svg">
+    <meta property="og:image" content="assets/hronir-rabbit.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/hronir-mark.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/hronir-rabbit.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -26,22 +26,25 @@
       <div class="backdrop" aria-hidden="true"></div>
       <div class="glow" aria-hidden="true"></div>
       <div class="grid" aria-hidden="true"></div>
-      <div class="labyrinth" aria-hidden="true"></div>
-      <canvas class="object-field" aria-hidden="true"></canvas>
 
-      <section class="folio">
-        <div class="rail" aria-hidden="true"></div>
-        <div class="block">
-          <img class="mark" src="assets/hronir-mark.svg" alt="" aria-hidden="true">
-          <h1 id="hero-title" data-text="Hronir LLC">Hronir <em>LLC</em></h1>
-          <p class="tagline">manifesting software objects</p>
+      <section class="terminal">
+        <div class="terminal__body">
+          <div class="rail" aria-hidden="true"></div>
+          <div class="block">
+            <div class="mark" aria-hidden="true">
+              <img class="mark__image mark__image--echo-one" src="assets/hronir-rabbit.svg" alt="">
+              <img class="mark__image mark__image--echo-two" src="assets/hronir-rabbit.svg" alt="">
+              <img class="mark__image mark__image--base" src="assets/hronir-rabbit.svg" alt="">
+            </div>
+            <h1 id="hero-title" data-text="Hronir LLC">Hronir <em>LLC</em></h1>
+            <p class="tagline">manifesting software objects</p>
+          </div>
         </div>
       </section>
 
       <button class="email" id="contact" type="button" aria-label="Email Hronir LLC">
         <span>hello [at] hronir [dot] dev</span>
       </button>
-      <noscript>hello [at] hronir [dot] dev</noscript>
     </main>
 
     <script src="site.js"></script>

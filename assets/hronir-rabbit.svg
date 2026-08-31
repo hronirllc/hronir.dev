@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 270 680 470" role="img" aria-labelledby="title desc">
+  <title id="title">Hronir Hare</title>
+  <desc id="desc">Minimal crouching rabbit line logo.</desc>
+
+  <g fill="none"
+     stroke="#ffffff"
+     stroke-width="12"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+    <path d="M500 300 L555 300 L705 448"/>
+    <path d="M470 335 L550 410 L650 455"/>
+    <path d="M350 455 L480 455 L585 500 L615 520"/>
+    <path d="M715 455 L780 500 L820 560 L785 620 L710 620"/>
+    <path d="M710 620 L640 690 L710 690"/>
+    <path d="M350 455 L260 540 L260 620 L300 660"/>
+    <path d="M210 615 L255 690 L340 690"/>
+    <path d="M430 545 L485 585 Q510 610 485 640 L430 690 L555 690 L570 700"/>
+  </g>
+
+  <line x1="718" y1="520" x2="750" y2="520"
+        stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+</svg>
