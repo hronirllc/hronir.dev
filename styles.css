@@ -32,12 +32,18 @@ button {
 
 .sigil {
   position: relative;
+  display: block;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  isolation: isolate;
+}
+
+.hero {
   display: grid;
   min-height: 100vh;
   place-items: center;
-  overflow: hidden;
   padding: clamp(28px, 7vmin, 76px);
-  isolation: isolate;
 }
 
 .backdrop,
@@ -526,9 +532,7 @@ h1::after {
 
 @media (max-width: 640px) {
   .sigil {
-    align-items: center;
-    justify-items: start;
-    padding: 28px 24px 86px;
+    padding: 0;
   }
 
   .terminal__body {
@@ -557,5 +561,177 @@ h1::after {
     right: 18px;
     bottom: 18px;
     width: calc(100vw - 36px);
+  }
+}
+
+/* ── content sections ─────────────────────────────────────────────── */
+
+.slab {
+  position: relative;
+  z-index: 2;
+  width: min(58rem, 100%);
+  margin: 0 auto;
+  padding: clamp(2.6rem, 8vmin, 5.5rem) clamp(28px, 7vmin, 76px);
+}
+
+.slab + .slab {
+  border-top: 1px solid rgba(46, 233, 221, 0.12);
+}
+
+.slab h2 {
+  margin: 0 0 clamp(1.2rem, 3vmin, 1.8rem);
+  color: var(--bone);
+  font-size: clamp(1.05rem, 2.6vmin, 1.35rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 0 22px rgba(46, 233, 221, 0.28);
+}
+
+.slab h2::before {
+  content: "// ";
+  color: var(--magenta);
+}
+
+.slab p {
+  max-width: 46rem;
+  margin: 0 0 1.1rem;
+  color: var(--ink);
+  font-size: clamp(0.86rem, 2.1vmin, 0.98rem);
+  line-height: 1.85;
+}
+
+.slab p:last-child {
+  margin-bottom: 0;
+}
+
+.slab a {
+  color: var(--cyan);
+  text-decoration-color: rgba(46, 233, 221, 0.4);
+  text-underline-offset: 3px;
+}
+
+.slab a:hover {
+  color: var(--magenta);
+  text-decoration-color: currentColor;
+}
+
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1px;
+  margin: clamp(1.6rem, 4vmin, 2.4rem) 0 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(46, 233, 221, 0.12);
+  border: 1px solid rgba(46, 233, 221, 0.12);
+}
+
+.capabilities li {
+  background: rgba(0, 1, 4, 0.72);
+  padding: clamp(1.1rem, 3vmin, 1.5rem);
+}
+
+.capabilities h3 {
+  margin: 0 0 0.55rem;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.capabilities p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(207, 200, 183, 0.82);
+}
+
+.colophon {
+  position: relative;
+  z-index: 2;
+  width: min(58rem, 100%);
+  margin: 0 auto;
+  border-top: 1px solid rgba(46, 233, 221, 0.12);
+  padding: clamp(1.8rem, 5vmin, 2.6rem) clamp(28px, 7vmin, 76px) clamp(5.5rem, 12vmin, 7rem);
+  color: rgba(207, 200, 183, 0.62);
+  font-size: 0.74rem;
+  line-height: 1.9;
+}
+
+.colophon strong {
+  color: rgba(247, 242, 223, 0.86);
+  font-weight: 500;
+}
+
+.colophon nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.colophon a {
+  color: rgba(46, 233, 221, 0.78);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(46, 233, 221, 0.22);
+}
+
+.colophon a:hover {
+  color: var(--magenta);
+  border-bottom-color: currentColor;
+}
+
+/* interior pages */
+
+.page {
+  padding-top: clamp(3.5rem, 10vmin, 7rem);
+}
+
+.page h1 {
+  font-size: clamp(1.5rem, 5vmin, 2.4rem);
+  margin-bottom: clamp(0.6rem, 2vmin, 1rem);
+}
+
+.page .lede {
+  color: rgba(207, 200, 183, 0.7);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.slab h3 {
+  margin: clamp(1.6rem, 4vmin, 2.2rem) 0 0.7rem;
+  color: var(--gold);
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.slab ul {
+  max-width: 46rem;
+  margin: 0 0 1.1rem;
+  padding-left: 1.1rem;
+  font-size: clamp(0.86rem, 2.1vmin, 0.98rem);
+  line-height: 1.85;
+}
+
+.slab li::marker {
+  color: var(--magenta);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    align-items: center;
+    justify-items: start;
+    padding: 28px 24px 86px;
+  }
+
+  .slab,
+  .colophon {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
